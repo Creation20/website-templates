@@ -111,7 +111,7 @@ function renderCart() {
   $('#cartCount').textContent = count ? `(${count})` : '';
   $('#subtotal').textContent = fmt(total);
   const left = FREE_SHIP - total;
-  $('#shipMsg').innerHTML = left > 0 ? `You're <b>${fmt(left)}</b> away from free delivery in Accra &amp; Kumasi.` : '🎉 You\'ve unlocked <b>free delivery</b>.';
+  $('#shipMsg').innerHTML = left > 0 ? `You're <b>${fmt(left)}</b> away from free delivery in Accra &amp; Tema.` : '🎉 You\'ve unlocked <b>free delivery</b>.';
   $('#shipBar').style.width = Math.min(100, (total / FREE_SHIP) * 100) + '%';
   $('#checkout').disabled = !count;
   $('#checkout').style.opacity = count ? 1 : .4;
