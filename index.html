@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website Templates — William Bentil</title>
+<meta name="description" content="Free, responsive website templates for a fashion store, a restaurant, a holiday-stay booking site and a barbershop. Designed and built by William Bentil.">
+<meta property="og:image" content="previews/sika-desktop.webp">
+<meta name="theme-color" content="#0e0e0d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e0e0d'/%3E%3Crect x='14' y='14' width='16' height='16' rx='3' fill='%23ff5a1f'/%3E%3Crect x='34' y='14' width='16' height='16' rx='3' fill='%23efebe3'/%3E%3Crect x='14' y='34' width='16' height='16' rx='3' fill='%23efebe3'/%3E%3Crect x='34' y='34' width='16' height='16' rx='3' fill='%23efebe3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0e0e0d; --card: #171716; --ink: #efebe3; --mute: #9a968c; --line: rgba(239,235,227,.12); --acc: #ff5a1f; --gut: clamp(16px, 4vw, 56px); --ease: cubic-bezier(.22,1,.36,1); color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Bricolage Grotesque", system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; height: auto; }
+  .mono { font-family: "JetBrains Mono", monospace; font-size: 12px; text-transform: uppercase; color: var(--mute); letter-spacing: .04em; }
+  header { padding: clamp(48px, 9vw, 120px) var(--gut) clamp(36px, 5vw, 64px); max-width: 1400px; margin: 0 auto; }
+  h1 { font-size: clamp(54px, 10vw, 150px); line-height: .86; letter-spacing: -.045em; font-weight: 700; margin: 18px 0 26px; font-variation-settings: "opsz" 96, "wdth" 82; }
+  h1 em { font-family: Georgia, serif; font-weight: 400; color: var(--acc); letter-spacing: -.02em; }
+  header p { max-width: 620px; color: var(--mute); font-size: 18px; margin: 0; }
+  header p a { color: var(--ink); border-bottom: 1px solid var(--acc); }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(16px, 2vw, 28px); padding: 0 var(--gut) clamp(60px, 8vw, 120px); max-width: 1400px; margin: 0 auto; }
+  .tpl { background: var(--card); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; transition: border-color .4s, transform .6s var(--ease); }
+  .tpl:hover { border-color: var(--c); transform: translateY(-4px); }
+  .tpl__shot { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #000; }
+  .tpl__shot > img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 1.2s var(--ease); }
+  .tpl:hover .tpl__shot > img { transform: scale(1.03); }
+  .tpl__phone { position: absolute; right: 4%; bottom: -18%; width: 22%; border-radius: 18px; border: 5px solid #050505; box-shadow: 0 30px 60px rgba(0,0,0,.6); overflow: hidden; transition: transform .8s var(--ease); }
+  .tpl__phone img { aspect-ratio: 390 / 844; object-fit: cover; object-position: top; }
+  .tpl:hover .tpl__phone { transform: translateY(-14%); }
+  .tpl__body { padding: 24px 26px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .tpl__top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .tpl h2 { margin: 0; font-size: clamp(30px, 3vw, 42px); line-height: 1; letter-spacing: -.03em; font-variation-settings: "opsz" 72, "wdth" 85; }
+  .tpl p { margin: 0; color: var(--mute); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 8px; }
+  .tags span { font-family: "JetBrains Mono", monospace; font-size: 11px; padding: 4px 9px; border-radius: 99px; border: 1px solid var(--line); color: var(--mute); }
+  .actions { display: flex; gap: 8px; margin-top: auto; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 99px; font-weight: 600; font-size: 15px; border: 1px solid var(--line); transition: background .3s, color .3s; }
+  .btn--solid { background: var(--c); border-color: var(--c); color: #0e0e0d; }
+  .btn:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  footer { border-top: 1px solid var(--line); padding: 28px var(--gut); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  footer a { border-bottom: 1px solid var(--acc); }
+  @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <p class="mono">Open-source · HTML / CSS / JS · No build step</p>
+  <h1>Website <em>templates</em></h1>
+  <p>Four complete, responsive websites, each with real working features: a cart, menus, a date-range booking calendar and a multi-step booking wizard. Designed and built by <a href="https://github.com/Creation20">William Bentil</a>. Free to use under MIT.</p>
+</header>
+
+<main class="grid">
+  <article class="tpl" style="--c:#d39a1c">
+    <a class="tpl__shot" href="sika/"><img src="previews/sika-desktop.webp" alt="SIKA fashion store template" width="1600" height="1000"><span class="tpl__phone"><img src="previews/sika-mobile.webp" alt="" width="520" height="1126"></span></a>
+    <div class="tpl__body">
+      <div class="tpl__top"><h2>SIKA</h2><span class="mono">Fashion e-commerce</span></div>
+      <p>An editorial clothing store for African wear: category filters, a quick-add size picker, and a cart drawer with a free-delivery progress bar that saves to localStorage.</p>
+      <div class="tags"><span>Product grid</span><span>Cart drawer</span><span>Size picker</span><span>Lookbook</span></div>
+      <div class="actions"><a class="btn btn--solid" href="sika/">Live demo ↗</a><a class="btn" href="https://github.com/Creation20/website-templates/tree/main/sika">Code</a></div>
+    </div>
+  </article>
+  <article class="tpl" style="--c:#e2452b">
+    <a class="tpl__shot" href="pepper-and-palm/"><img src="previews/pepper-and-palm-desktop.webp" alt="Pepper and Palm restaurant template" width="1600" height="1000"><span class="tpl__phone"><img src="previews/pepper-and-palm-mobile.webp" alt="" width="520" height="1126"></span></a>
+    <div class="tpl__body">
+      <div class="tpl__top"><h2>Pepper &amp; Palm</h2><span class="mono">Restaurant</span></div>
+      <p>A moody restaurant site with a live “open now” status, a tabbed menu with spice levels and a vegetarian filter, and table reservations that issue a booking ticket.</p>
+      <div class="tags"><span>Tabbed menu</span><span>Reservations</span><span>Live hours</span><span>Gallery</span></div>
+      <div class="actions"><a class="btn btn--solid" href="pepper-and-palm/">Live demo ↗</a><a class="btn" href="https://github.com/Creation20/website-templates/tree/main/pepper-and-palm">Code</a></div>
+    </div>
+  </article>
+  <article class="tpl" style="--c:#2bb3a3">
+    <a class="tpl__shot" href="coastline/"><img src="previews/coastline-desktop.webp" alt="Coastline stays booking template" width="1600" height="1000"><span class="tpl__phone"><img src="previews/coastline-mobile.webp" alt="" width="520" height="1126"></span></a>
+    <div class="tpl__body">
+      <div class="tpl__top"><h2>Coastline</h2><span class="mono">Booking / stays</span></div>
+      <p>A holiday-rental booking site with a custom date-range calendar, a guest picker, filters and a price slider, wishlists, and a stay page showing the full price breakdown.</p>
+      <div class="tags"><span>Date-range picker</span><span>Filters</span><span>Price calc</span><span>Wishlist</span></div>
+      <div class="actions"><a class="btn btn--solid" href="coastline/">Live demo ↗</a><a class="btn" href="https://github.com/Creation20/website-templates/tree/main/coastline">Code</a></div>
+    </div>
+  </article>
+  <article class="tpl" style="--c:#d4ff3a">
+    <a class="tpl__shot" href="fade-room/"><img src="previews/fade-room-desktop.webp" alt="Fade Room barbershop template" width="1600" height="1000"><span class="tpl__phone"><img src="previews/fade-room-mobile.webp" alt="" width="520" height="1126"></span></a>
+    <div class="tpl__body">
+      <div class="tpl__top"><h2>Fade Room</h2><span class="mono">Appointments</span></div>
+      <p>A bold barbershop site with a four-step booking wizard covering service, barber, live time slots and your details. It ends with a booking summary and an .ics calendar file.</p>
+      <div class="tags"><span>Booking wizard</span><span>Time slots</span><span>.ics export</span><span>Pricing</span></div>
+      <div class="actions"><a class="btn btn--solid" href="fade-room/">Live demo ↗</a><a class="btn" href="https://github.com/Creation20/website-templates/tree/main/fade-room">Code</a></div>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <span>© 2026 William Bentil · MIT licence</span>
+  <span>All brands are fictional · Photos from <a href="https://unsplash.com">Unsplash</a></span>
+</footer>
+</body>
+</html>

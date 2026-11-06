@@ -1,0 +1,70 @@
+{
+ "license": "Unsplash License (https://unsplash.com/license)",
+ "photos": {
+  "sika": {
+   "hero": "https://images.unsplash.com/photo-1708170236295-20ab8fbadcef",
+   "fan": "https://images.unsplash.com/photo-1708170236215-b6edcad7f49a",
+   "kente": "https://images.unsplash.com/photo-1709809081557-78f803ce93a0",
+   "red": "https://images.unsplash.com/photo-1625646741211-711bdd65c570",
+   "vest": "https://images.unsplash.com/photo-1531123414780-f74242c2b052",
+   "blue": "https://images.unsplash.com/photo-1632765937900-a3bbbfa58d46",
+   "pink": "https://images.unsplash.com/photo-1530884698386-d42ad3199b1f",
+   "suit": "https://images.unsplash.com/photo-1764593008195-87ca871d72bd",
+   "blazer": "https://images.unsplash.com/photo-1709810529099-0ce6102692df",
+   "yellow": "https://images.unsplash.com/photo-1696962678565-bee84e6b9cb6",
+   "duo": "https://images.unsplash.com/photo-1485570661444-73b3f0ff9d2f",
+   "wraps": "https://images.unsplash.com/photo-1681545303529-b6beb2e19f02",
+   "cloth": "https://images.unsplash.com/photo-1768212565426-58b089b6386d",
+   "field": "https://images.unsplash.com/photo-1529245019870-59b249281fd3",
+   "satin": "https://images.unsplash.com/photo-1709912453702-8aa5b9a42640",
+   "pinstripe": "https://images.unsplash.com/photo-1613876214872-a73df2a1b8bc"
+  },
+  "pepper-and-palm": {
+   "hero": "https://images.unsplash.com/photo-1786209677036-1580ca1b280d",
+   "egusi": "https://images.unsplash.com/photo-1763048443535-1243379234e2",
+   "jollof": "https://images.unsplash.com/photo-1665332195309-9d75071138f0",
+   "chicken": "https://images.unsplash.com/photo-1603496987674-79600a000f55",
+   "kontomire": "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26",
+   "light": "https://images.unsplash.com/photo-1534939561126-855b8675edd7",
+   "grill": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1",
+   "bofrot": "https://images.unsplash.com/photo-1665833613236-7c1d087463b1",
+   "stew": "https://images.unsplash.com/photo-1608500218861-01091cdc501e",
+   "pots": "https://images.unsplash.com/photo-1773209927898-a0a7e0a13125",
+   "spread": "https://images.unsplash.com/photo-1665400808116-f0e6339b7e9a",
+   "interior": "https://images.unsplash.com/photo-1776763255189-3c8237aec808",
+   "bar": "https://images.unsplash.com/photo-1783447036642-90a65ff85a0f"
+  },
+  "coastline": {
+   "hero": "https://images.unsplash.com/photo-1776762893024-890728937eab",
+   "hut": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2",
+   "deck": "https://images.unsplash.com/photo-1520483601560-389dff434fdf",
+   "infinity": "https://images.unsplash.com/photo-1543489822-c49534f3271f",
+   "sunsetpool": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+   "living": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92",
+   "whitehouse": "https://images.unsplash.com/photo-1597211833712-5e41faa202ea",
+   "bedroom": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+   "curvy": "https://images.unsplash.com/photo-1622015663319-e97e697503ee",
+   "lawn": "https://images.unsplash.com/photo-1645146917739-bbb990b705db",
+   "sunsetdeck": "https://images.unsplash.com/photo-1691677749553-1b6c76821339",
+   "twilight": "https://images.unsplash.com/photo-1759372945658-1e9f56e751bd",
+   "woodroom": "https://images.unsplash.com/photo-1765547090903-348b711f0eee",
+   "window": "https://images.unsplash.com/photo-1768047845996-4771cf1a61e9",
+   "curtains": "https://images.unsplash.com/photo-1759328257280-28bdb3050be3",
+   "overwater": "https://images.unsplash.com/photo-1763605702328-a9890d77eaba"
+  },
+  "fade-room": {
+   "hero": "https://images.unsplash.com/photo-1773904215697-e6c21fc27ac2",
+   "razor": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a",
+   "scissors": "https://images.unsplash.com/photo-1647140655214-e4a2d914971f",
+   "beard": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1",
+   "blow": "https://images.unsplash.com/photo-1605497788044-5a32c7078486",
+   "tools": "https://images.unsplash.com/photo-1621605815971-fbc98d665033",
+   "chair": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70",
+   "shop": "https://images.unsplash.com/photo-1781455793310-8427c96454c7",
+   "stylist": "https://images.unsplash.com/photo-1761839256791-6a93f89fb8b0",
+   "bw": "https://images.unsplash.com/photo-1781768526571-ef9c333279c7",
+   "long": "https://images.unsplash.com/photo-1536520002442-39764a41e987",
+   "silver": "https://images.unsplash.com/photo-1621645582931-d1d3e6564943"
+  }
+ }
+}

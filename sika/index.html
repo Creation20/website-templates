@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIKA — Modern African Wear, made in Accra</title>
+<meta name="description" content="SIKA: hand-finished clothing cut from wax print, kente and adinkra cloth in Accra. Website template by William Bentil.">
+<meta name="theme-color" content="#f3ede3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23d39a1c'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia' font-style='italic' font-size='38' fill='%2316130f'%3Es%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="announce" role="note">
+  <div class="announce__track">
+    <span>Free delivery in Accra &amp; Kumasi on orders over GH₵ 800</span><i>✦</i>
+    <span>Pay with Mobile Money or card</span><i>✦</i>
+    <span>Free alterations within 14 days</span><i>✦</i>
+    <span aria-hidden="true">Free delivery in Accra &amp; Kumasi on orders over GH₵ 800</span><i>✦</i>
+    <span aria-hidden="true">Pay with Mobile Money or card</span><i>✦</i>
+    <span aria-hidden="true">Free alterations within 14 days</span><i>✦</i>
+  </div>
+</div>
+
+<header class="header">
+  <button class="header__menu" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  <nav class="header__nav" aria-label="Primary">
+    <a href="#shop">New in</a>
+    <a href="#shop" data-filter-link="women">Women</a>
+    <a href="#shop" data-filter-link="men">Men</a>
+    <a href="#cloth">The Cloth</a>
+    <a href="#lookbook">Lookbook</a>
+  </nav>
+  <a href="#" class="logo" aria-label="SIKA home">SIKA<sup>®</sup></a>
+  <div class="header__actions">
+    <a href="#" class="header__link">Account</a>
+    <button class="bag-btn" id="openCart" aria-label="Open bag">Bag <span class="bag-count" id="bagCount">0</span></button>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__copy">
+      <p class="eyebrow">Collection 07 — Harmattan</p>
+      <h1 class="hero__title">Wear the <em>story</em>.</h1>
+      <p class="hero__lead">Hand-finished pieces cut from wax print, kente and adinkra cloth in our studio in Osu, Accra. Small batches, made to be kept.</p>
+      <div class="hero__ctas">
+        <a href="#shop" class="btn btn--dark" data-filter-link="women">Shop women</a>
+        <a href="#shop" class="btn" data-filter-link="men">Shop men</a>
+      </div>
+      <div class="hero__meta">
+        <div><b>48</b><span>pieces this season</span></div>
+        <div><b>12</b><span>tailors in Osu</span></div>
+        <div><b>4.9★</b><span>2,140 reviews</span></div>
+      </div>
+    </div>
+    <div class="hero__media">
+      <img class="hero__img" src="img/hero.webp" alt="Model in a mustard ruched-sleeve top and green trousers" width="1600" height="2000" fetchpriority="high">
+      <img class="hero__img2" src="img/fan.webp" alt="Model holding a woven fan in a mustard top" width="900" height="1100" loading="lazy">
+      <button class="tag" data-quick="esi-set">
+        <span class="tag__dot"></span>
+        <span><b>The Esi Set</b><small>GH₵ 760 · Quick add</small></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="cats">
+    <a class="cat" href="#shop" data-filter-link="women">
+      <img src="img/kente.webp" alt="Model in a kente-print dress among woven baskets" loading="lazy" width="900" height="1100">
+      <span class="cat__label">Women <i>→</i></span>
+    </a>
+    <a class="cat" href="#shop" data-filter-link="men">
+      <img src="img/suit.webp" alt="Man in a brown corduroy jacket and patterned tie" loading="lazy" width="900" height="1100">
+      <span class="cat__label">Men <i>→</i></span>
+    </a>
+    <a class="cat" href="#shop" data-filter-link="accessories">
+      <img src="img/wraps.webp" alt="Three women in matching printed headwraps" loading="lazy" width="900" height="1100">
+      <span class="cat__label">Headwraps &amp; more <i>→</i></span>
+    </a>
+  </section>
+
+  <!-- Shop -->
+  <section class="shop" id="shop">
+    <div class="shop__head">
+      <h2 class="h2">New <em>in</em></h2>
+      <div class="shop__tools">
+        <div class="chips" role="tablist" aria-label="Filter products">
+          <button class="chip is-on" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="chip" data-filter="women" role="tab" aria-selected="false">Women</button>
+          <button class="chip" data-filter="men" role="tab" aria-selected="false">Men</button>
+          <button class="chip" data-filter="accessories" role="tab" aria-selected="false">Accessories</button>
+        </div>
+        <label class="sort">Sort
+          <select id="sort">
+            <option value="new">Newest</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Made in Accra</span><i>✦</i><span>Wax print</span><i>✦</i><span>Kente</span><i>✦</i><span>Adinkra</span><i>✦</i><span>Small batches</span><i>✦</i>
+      <span>Made in Accra</span><i>✦</i><span>Wax print</span><i>✦</i><span>Kente</span><i>✦</i><span>Adinkra</span><i>✦</i><span>Small batches</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- Story -->
+  <section class="cloth" id="cloth">
+    <div class="cloth__media">
+      <img src="img/cloth.webp" alt="Stacks of colourful wax print fabric at a market" loading="lazy" width="1100" height="1375">
+    </div>
+    <div class="cloth__copy">
+      <p class="eyebrow">The Cloth</p>
+      <h2 class="h2">Every print <em>says something</em>.</h2>
+      <p>In Ghana, cloth is a language. Prints carry names, proverbs and family history. We buy directly from weavers in Bonwire and from dealers in Makola, and tell you where each bolt came from.</p>
+      <ul class="facts">
+        <li><b>100%</b><span>cotton wax print, pre-washed</span></li>
+        <li><b>3 wks</b><span>to hand-weave one kente strip set</span></li>
+        <li><b>0</b><span>pieces wasted: offcuts become headwraps</span></li>
+      </ul>
+      <a href="#lookbook" class="link">See the lookbook →</a>
+    </div>
+  </section>
+
+  <!-- Lookbook -->
+  <section class="look" id="lookbook">
+    <div class="look__head">
+      <h2 class="h2">Look<em>book</em></h2>
+      <div class="look__nav">
+        <button class="round" data-look="-1" aria-label="Previous look">←</button>
+        <button class="round" data-look="1" aria-label="Next look">→</button>
+      </div>
+    </div>
+    <div class="look__rail" id="lookRail">
+      <figure><img src="img/yellow.webp" alt="Model in a green print dress against a yellow wall" loading="lazy" width="1100" height="1375"><figcaption><b>01</b> Makola Afternoon</figcaption></figure>
+      <figure><img src="img/duo.webp" alt="Two women in matching teal print sets walking" loading="lazy" width="1100" height="1375"><figcaption><b>02</b> Sister Set</figcaption></figure>
+      <figure><img src="img/satin.webp" alt="Model in black satin with puffed sleeves" loading="lazy" width="1100" height="1375"><figcaption><b>03</b> After Dark</figcaption></figure>
+      <figure><img src="img/pinstripe.webp" alt="Model in a pinstripe blazer" loading="lazy" width="1100" height="1375"><figcaption><b>04</b> Boardroom</figcaption></figure>
+      <figure><img src="img/field.webp" alt="Model in a print dress in a wheat field" loading="lazy" width="1100" height="1375"><figcaption><b>05</b> Harmattan</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews">
+    <blockquote><p>“The kente dress fit like it was made for me, because it nearly was. They took it in for free.”</p><cite>Akosua, East Legon</cite></blockquote>
+    <blockquote><p>“Paid with MoMo, delivered to Kumasi in two days. The blazer gets compliments every single time.”</p><cite>Kwabena, Kumasi</cite></blockquote>
+    <blockquote><p>“Finally a Ghanaian brand that tells you where the cloth is from.”</p><cite>Nana Ama, Tema</cite></blockquote>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="news">
+    <h2 class="news__title">Get first pick of <em>every drop</em>.</h2>
+    <form class="news__form" id="newsForm" novalidate>
+      <label class="sr-only" for="newsEmail">Email address</label>
+      <input id="newsEmail" type="email" placeholder="Your email address" required>
+      <button class="btn btn--dark" type="submit">Join the list</button>
+    </form>
+    <p class="news__msg" id="newsMsg" role="status"></p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__big">SIKA</div>
+  <div class="footer__cols">
+    <div><h3>Visit</h3><p>14 Oxford Street, Osu<br>Accra, Ghana<br>Mon–Sat, 10:00–19:00</p></div>
+    <div><h3>Help</h3><a href="#">Delivery</a><a href="#">Returns &amp; alterations</a><a href="#">Size guide</a></div>
+    <div><h3>Follow</h3><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Pinterest</a></div>
+    <div><h3>Pay with</h3><p>MTN MoMo · Telecel Cash · AT Money · Visa · Mastercard</p></div>
+  </div>
+  <p class="footer__note">A website template by <a href="https://github.com/Creation20">William Bentil</a>. SIKA is a fictional brand. Photos from Unsplash.</p>
+</footer>
+
+<!-- Quick add -->
+<dialog class="quick" id="quick" aria-labelledby="quickName">
+  <button class="quick__close" data-close aria-label="Close">✕</button>
+  <div class="quick__img"><img id="quickImg" alt=""></div>
+  <div class="quick__body">
+    <p class="eyebrow" id="quickCat"></p>
+    <h3 class="quick__name" id="quickName"></h3>
+    <p class="quick__price" id="quickPrice"></p>
+    <p class="quick__desc" id="quickDesc"></p>
+    <fieldset class="sizes">
+      <legend>Size <button type="button" class="link link--sm">Size guide</button></legend>
+      <div id="sizes"></div>
+    </fieldset>
+    <p class="quick__err" id="quickErr" role="alert"></p>
+    <button class="btn btn--dark btn--block" id="addToBag">Add to bag</button>
+    <p class="quick__note">Free alterations within 14 days · Delivery in 1–3 days</p>
+  </div>
+</dialog>
+
+<!-- Cart -->
+<div class="scrim" id="scrim" hidden></div>
+<aside class="cart" id="cart" aria-label="Shopping bag" aria-hidden="true">
+  <div class="cart__head">
+    <h2>Your bag <span id="cartCount"></span></h2>
+    <button class="round" id="closeCart" aria-label="Close bag">✕</button>
+  </div>
+  <div class="cart__ship">
+    <p id="shipMsg"></p>
+    <div class="bar"><i id="shipBar"></i></div>
+  </div>
+  <ul class="cart__items" id="cartItems"></ul>
+  <div class="cart__foot">
+    <div class="cart__row"><span>Subtotal</span><b id="subtotal">GH₵ 0</b></div>
+    <p class="cart__small">Taxes included. Delivery calculated at checkout.</p>
+    <button class="btn btn--dark btn--block" id="checkout">Checkout · MoMo or card</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="main.js"></script>
+</body>
+</html>

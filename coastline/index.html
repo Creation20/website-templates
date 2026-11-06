@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coastline — Beach stays along Ghana's coast</title>
+<meta name="description" content="Coastline: book villas, surf houses and lagoon chalets from Ada to Axim. Booking website template by William Bentil.">
+<meta name="theme-color" content="#f5f0e8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230f5f5c'/%3E%3Cpath d='M10 38c6-6 11-6 16 0s11 6 16 0 9-6 12-3' stroke='%23f5f0e8' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='42' cy='22' r='6' fill='%23f06f4f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a href="#" class="logo" aria-label="Coastline home">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 24c4-4 7-4 10 0s7 4 10 0 6-4 9-2" stroke="currentColor" stroke-width="3.4" fill="none" stroke-linecap="round"/><circle cx="27" cy="12" r="4.5" fill="#f06f4f"/></svg>
+    coastline
+  </a>
+  <nav class="top__nav" aria-label="Primary">
+    <a href="#stays" class="is-on">Stays</a><a href="#places">Places</a><a href="#host">Host your place</a>
+  </nav>
+  <div class="top__right">
+    <button class="wish-btn" id="wishBtn" aria-label="Saved stays">♡ <span id="wishCount">0</span></button>
+    <a href="#" class="btn btn--line btn--sm">Sign in</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero__img">
+      <img src="img/hero.webp" alt="Aerial view of beach villas beside turquoise water" width="2000" height="1333" fetchpriority="high">
+    </div>
+    <div class="hero__copy">
+      <p class="eyebrow">Ada · Cape Coast · Busua · Elmina · Axim</p>
+      <h1>Stay where the <em>ocean</em> starts.</h1>
+      <p>Hand-picked villas, surf houses and lagoon chalets along Ghana’s coast. Every host is verified and every booking is protected.</p>
+    </div>
+
+    <form class="search" id="search" autocomplete="off">
+      <label class="search__cell">
+        <span>Where</span>
+        <select id="where">
+          <option value="">Anywhere on the coast</option>
+          <option>Ada Foah</option><option>Kokrobite</option><option>Anomabo</option><option>Cape Coast</option><option>Elmina</option><option>Busua</option><option>Axim</option>
+        </select>
+      </label>
+      <button type="button" class="search__cell" data-pop="cal" id="inBtn"><span>Check in</span><b id="inTxt">Add date</b></button>
+      <button type="button" class="search__cell" data-pop="cal" id="outBtn"><span>Check out</span><b id="outTxt">Add date</b></button>
+      <button type="button" class="search__cell" data-pop="guests"><span>Guests</span><b id="guestTxt">2 guests</b></button>
+      <button class="search__go" type="submit" aria-label="Search stays"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2.4" fill="none"/><path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span>Search</span></button>
+
+      <div class="pop pop--cal" id="popCal" hidden>
+        <div class="cal__head">
+          <button type="button" class="cal__nav" data-cal="-1" aria-label="Previous month">‹</button>
+          <p class="cal__hint" id="calHint">Select your check-in date</p>
+          <button type="button" class="cal__nav" data-cal="1" aria-label="Next month">›</button>
+        </div>
+        <div class="cal__months" id="calMonths"></div>
+        <div class="cal__foot"><button type="button" class="link" id="calClear">Clear dates</button><button type="button" class="btn btn--dark btn--sm" id="calDone">Done</button></div>
+      </div>
+      <div class="pop pop--guests" id="popGuests" hidden>
+        <div class="gst"><div><b>Adults</b><small>Ages 13+</small></div><div class="step"><button type="button" data-g="adults" data-d="-1" aria-label="Fewer adults">−</button><output id="adults">2</output><button type="button" data-g="adults" data-d="1" aria-label="More adults">+</button></div></div>
+        <div class="gst"><div><b>Children</b><small>Ages 2–12</small></div><div class="step"><button type="button" data-g="kids" data-d="-1" aria-label="Fewer children">−</button><output id="kids">0</output><button type="button" data-g="kids" data-d="1" aria-label="More children">+</button></div></div>
+        <div class="gst"><div><b>Pets</b><small>Some stays allow pets</small></div><div class="step"><button type="button" data-g="pets" data-d="-1" aria-label="Fewer pets">−</button><output id="pets">0</output><button type="button" data-g="pets" data-d="1" aria-label="More pets">+</button></div></div>
+      </div>
+    </form>
+  </section>
+
+  <section class="stays" id="stays">
+    <div class="filters">
+      <div class="chips" id="chips">
+        <button class="chip is-on" data-tag="">All</button>
+        <button class="chip" data-tag="beachfront">🏖️ Beachfront</button>
+        <button class="chip" data-tag="pool">🏊 Pool</button>
+        <button class="chip" data-tag="lagoon">🛶 Lagoon</button>
+        <button class="chip" data-tag="surf">🏄🏾 Surf</button>
+        <button class="chip" data-tag="family">👨🏾‍👩🏾‍👧🏾 Family</button>
+        <button class="chip" data-tag="workation">💻 Workation</button>
+      </div>
+      <div class="filters__right">
+        <label class="price">Up to <b id="priceVal">GH₵ 2,500</b>
+          <input type="range" id="price" min="400" max="2500" step="50" value="2500" aria-label="Maximum price per night">
+        </label>
+        <select id="sortBy" aria-label="Sort stays">
+          <option value="rec">Recommended</option><option value="low">Lowest price</option><option value="high">Highest price</option><option value="rating">Top rated</option>
+        </select>
+      </div>
+    </div>
+    <p class="stays__count" id="count" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="places" id="places">
+    <div class="places__head">
+      <h2 class="h2">Pick a <em>place</em></h2>
+      <p>From the Volta estuary to the western palm coast, 540 km of shoreline.</p>
+    </div>
+    <div class="places__row" id="placesRow"></div>
+  </section>
+
+  <section class="host" id="host">
+    <img src="img/sunsetpool.webp" alt="Resort pool lined with palm trees at sunset" loading="lazy" width="1100" height="733">
+    <div class="host__copy">
+      <h2 class="h2">Own a place by the sea? <em>Host it.</em></h2>
+      <p>Hosts on Coastline earn an average of GH₵ 14,200 a month. We handle MoMo payouts, guest verification and cleaning crews.</p>
+      <a href="#" class="btn btn--coral">Start hosting</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__cols">
+    <div><a href="#" class="logo">coastline</a><p>Beach stays along Ghana’s coast.</p></div>
+    <div><h3>Explore</h3><a href="#">Ada Foah</a><a href="#">Cape Coast</a><a href="#">Busua</a></div>
+    <div><h3>Support</h3><a href="#">Help centre</a><a href="#">Cancellation options</a><a href="#">Safety</a></div>
+    <div><h3>Pay with</h3><p>MTN MoMo, Telecel Cash, Visa and Mastercard</p></div>
+  </div>
+  <p class="foot__note">A booking website template by <a href="https://github.com/Creation20">William Bentil</a>. Coastline and its listings are fictional. Photos from Unsplash.</p>
+</footer>
+
+<!-- Stay detail -->
+<dialog class="detail" id="detail" aria-labelledby="dTitle">
+  <button class="detail__close" data-close aria-label="Close">✕</button>
+  <div class="detail__gallery" id="dGallery"></div>
+  <div class="detail__body">
+    <div class="detail__info">
+      <p class="eyebrow" id="dPlace"></p>
+      <h2 id="dTitle"></h2>
+      <p class="detail__meta" id="dMeta"></p>
+      <div class="host-row" id="dHost"></div>
+      <p id="dDesc"></p>
+      <h3>What this place offers</h3>
+      <ul class="amen" id="dAmen"></ul>
+    </div>
+    <aside class="panel" id="panel">
+      <p class="panel__price"><b id="pPrice"></b> / night</p>
+      <div class="panel__dates">
+        <button type="button" data-pop2="cal"><span>Check in</span><b id="pIn">Add date</b></button>
+        <button type="button" data-pop2="cal"><span>Check out</span><b id="pOut">Add date</b></button>
+        <div class="panel__guests"><span>Guests</span><b id="pGuests"></b></div>
+      </div>
+      <div class="panel__calc" id="pCalc"></div>
+      <button class="btn btn--coral btn--block" id="reserve">Reserve</button>
+      <p class="panel__small">You won’t be charged yet</p>
+    </aside>
+    <div class="done" id="done" hidden>
+      <div class="done__tick">✓</div>
+      <h3>Request sent!</h3>
+      <p id="doneTxt"></p>
+      <button class="btn btn--dark btn--sm" data-close>Back to stays</button>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="main.js"></script>
+</body>
+</html>

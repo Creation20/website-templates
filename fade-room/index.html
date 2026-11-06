@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fade Room — Barbershop &amp; Grooming, Osu</title>
+<meta name="description" content="Fade Room: fades, beard sculpting and locs in Osu, Accra. Book your chair online. Barbershop website template by William Bentil.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0b'/%3E%3Cpath d='M18 50 46 14' stroke='%23d4ff3a' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar">
+  <a href="#" class="mark" aria-label="Fade Room home"><i aria-hidden="true"></i>FADE ROOM</a>
+  <nav class="bar__links" aria-label="Primary"><a href="#services">Services</a><a href="#barbers">Barbers</a><a href="#plans">Plans</a><a href="#visit">Visit</a></nav>
+  <a href="#book" class="btn btn--lime btn--sm">Book a chair</a>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero__text">
+      <p class="live" id="nextSlot"><i></i>Finding the next free chair…</p>
+      <h1><span>Sharp</span><span>cuts.</span><span class="outline">No wait.</span></h1>
+      <p class="hero__lead">Fades, tapers, beard sculpting and locs in Osu. Book a time online and your barber will be ready when you arrive.</p>
+      <div class="hero__ctas"><a href="#book" class="btn btn--lime">Book now</a><a href="#services" class="btn btn--line">Prices</a></div>
+    </div>
+    <div class="hero__media">
+      <img src="img/hero.webp" alt="Barbershop interior with gold-lit chairs and mirrors" width="2000" height="1333" fetchpriority="high">
+      <div class="hero__badge"><b>4.9</b><span>★★★★★<br>3,200+ cuts</span></div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="ticker__track">
+    <span>Skin fade</span><i>/</i><span>Beard sculpt</span><i>/</i><span>Hot towel shave</span><i>/</i><span>Locs retwist</span><i>/</i><span>Kids cut</span><i>/</i><span>Line-up</span><i>/</i>
+    <span>Skin fade</span><i>/</i><span>Beard sculpt</span><i>/</i><span>Hot towel shave</span><i>/</i><span>Locs retwist</span><i>/</i><span>Kids cut</span><i>/</i><span>Line-up</span><i>/</i>
+  </div></div>
+
+  <section class="services" id="services">
+    <div class="sec-head"><p class="num">01</p><h2>Services</h2><p class="sec-sub">Every cut includes a consult, a hot-towel finish and a free line-up within 7 days.</p></div>
+    <ul class="svc" id="svcList"></ul>
+    <img class="svc__peek" id="peek" alt="" aria-hidden="true">
+  </section>
+
+  <section class="barbers" id="barbers">
+    <div class="sec-head"><p class="num">02</p><h2>Barbers</h2><p class="sec-sub">Pick your favourite, or choose any available barber for the soonest slot.</p></div>
+    <div class="team" id="team"></div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="sec-head"><p class="num">03</p><h2>Book a chair</h2></div>
+    <div class="wizard">
+      <ol class="steps" id="steps">
+        <li class="is-on"><b>1</b>Service</li><li><b>2</b>Barber</li><li><b>3</b>Time</li><li><b>4</b>Details</li>
+      </ol>
+      <div class="wizard__body">
+        <div class="pane" data-pane="0">
+          <h3>What are we doing today?</h3>
+          <div class="opts" id="optSvc"></div>
+          <h4>Add-ons</h4>
+          <div class="addons" id="optAdd"></div>
+        </div>
+        <div class="pane" data-pane="1" hidden>
+          <h3>Who’s cutting?</h3>
+          <div class="opts opts--barbers" id="optBarber"></div>
+        </div>
+        <div class="pane" data-pane="2" hidden>
+          <h3>Pick a day &amp; time</h3>
+          <div class="days" id="days"></div>
+          <div class="slots" id="slots"></div>
+          <p class="hint" id="slotHint"></p>
+        </div>
+        <div class="pane" data-pane="3" hidden>
+          <h3>Your details</h3>
+          <form id="details" class="details" novalidate>
+            <label>Name<input name="name" autocomplete="name" placeholder="Kwame Asante"></label>
+            <label>Phone (WhatsApp)<input name="phone" type="tel" autocomplete="tel" placeholder="024 123 4567"></label>
+            <label class="full">Anything we should know?<textarea name="note" rows="2" placeholder="Reference photo, sensitive skin, first-time locs…"></textarea></label>
+            <label class="check full"><input type="checkbox" name="remind" checked> Send me a WhatsApp reminder 2 hours before</label>
+          </form>
+          <p class="err" id="err" role="alert"></p>
+        </div>
+        <div class="pane pane--done" data-pane="4" hidden>
+          <div class="stamp">BOOKED</div>
+          <h3 id="doneTitle">See you soon</h3>
+          <p id="doneTxt"></p>
+          <div class="done__btns"><a class="btn btn--lime btn--sm" id="ics" download="fade-room.ics">Add to calendar</a><button class="btn btn--line btn--sm" id="restart">Book another</button></div>
+        </div>
+        <div class="nav-row" id="navRow">
+          <button class="btn btn--line btn--sm" id="back" disabled>← Back</button>
+          <button class="btn btn--lime btn--sm" id="next">Continue →</button>
+        </div>
+      </div>
+      <aside class="summary" aria-live="polite">
+        <p class="summary__title">Your booking</p>
+        <dl id="sum"></dl>
+        <div class="summary__total"><span>Total</span><b id="total">GH₵ 0</b></div>
+        <p class="summary__small">Pay in the shop with MoMo, card or cash. Free cancellation up to 2 hours before.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="plans" id="plans">
+    <div class="sec-head"><p class="num">04</p><h2>Memberships</h2><p class="sec-sub">For people who like to stay fresh. Cancel anytime.</p></div>
+    <div class="plan-grid">
+      <article class="plan"><h3>Fresh</h3><p class="plan__price">GH₵ 250<small>/month</small></p><ul><li>2 cuts a month</li><li>Free line-ups</li><li>Priority booking</li></ul><a href="#book" class="btn btn--line btn--block">Choose Fresh</a></article>
+      <article class="plan plan--hot"><span class="plan__tag">Most popular</span><h3>Unlimited</h3><p class="plan__price">GH₵ 600<small>/month</small></p><ul><li>Unlimited cuts</li><li>Monthly beard sculpt</li><li>Hot towel every visit</li><li>Book 30 days ahead</li></ul><a href="#book" class="btn btn--lime btn--block">Choose Unlimited</a></article>
+      <article class="plan"><h3>Family</h3><p class="plan__price">GH₵ 900<small>/month</small></p><ul><li>Up to 4 people</li><li>Kids cuts included</li><li>Weekend priority</li></ul><a href="#book" class="btn btn--line btn--block">Choose Family</a></article>
+    </div>
+  </section>
+
+  <section class="shots" aria-label="Inside Fade Room">
+    <img src="img/shop.webp" alt="Barbershop interior with chairs and mirrors" loading="lazy" width="1100" height="733">
+    <img src="img/chair.webp" alt="Leather barber chair by a brick wall" loading="lazy" width="1100" height="733">
+    <img src="img/tools.webp" alt="Clippers, scissors and a comb on slate" loading="lazy" width="1100" height="733">
+    <img src="img/bw.webp" alt="Black and white photo of barbers at work" loading="lazy" width="1100" height="733">
+  </section>
+
+  <section class="visit" id="visit">
+    <div>
+      <div class="sec-head"><p class="num">05</p><h2>Visit</h2></div>
+      <p class="visit__addr">22 Cantonments Road, Osu<br>Opposite the Danquah Circle Total station</p>
+      <table class="hours"><tr><td>Mon – Fri</td><td>08:00 – 21:00</td></tr><tr><td>Saturday</td><td>07:00 – 22:00</td></tr><tr><td>Sunday</td><td>12:00 – 18:00</td></tr></table>
+      <div class="visit__btns"><a class="btn btn--lime btn--sm" href="https://wa.me/233240000000" target="_blank" rel="noopener">WhatsApp us</a><a class="btn btn--line btn--sm" href="https://maps.google.com/?q=Osu+Accra" target="_blank" rel="noopener">Directions ↗</a></div>
+    </div>
+    <img src="img/long.webp" alt="Long row of barber chairs under pendant lights" loading="lazy" width="1100" height="733">
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="foot__big">FADE ROOM</p>
+  <p class="foot__note">A barbershop website template by <a href="https://github.com/Creation20">William Bentil</a>. Fade Room is fictional. Photos from Unsplash.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
