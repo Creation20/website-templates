@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ama &amp; Kojo — 12 December 2026, Accra</title>
+<meta name="description" content="Join Ama and Kojo for their engagement, wedding and reception in Accra. RSVP online. Wedding website template by William Bentil.">
+<meta name="theme-color" content="#fbf7f0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%235a1f2b'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia' font-style='italic' font-size='26' fill='%23e3c78f'%3EA%26K%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <a href="#top" class="mono">A <i>&amp;</i> K</a>
+  <div class="nav__links"><a href="#story">Our story</a><a href="#events">The weekend</a><a href="#rsvp">RSVP</a><a href="#gifts">Gifts</a><a href="#faq">FAQ</a></div>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <img src="img/hero.webp" alt="Ama and Kojo in traditional attire walking through a sunlit field" width="2000" height="1333" fetchpriority="high">
+    <div class="hero__shade"></div>
+    <div class="hero__text">
+      <p class="hero__pre">Together with their families</p>
+      <h1>Ama <i>&amp;</i> Kojo</h1>
+      <p class="hero__date">Saturday · 12 December 2026 · Accra</p>
+      <div class="count" id="count" aria-live="polite">
+        <div><b id="cd">0</b><span>days</span></div><div><b id="ch">0</b><span>hours</span></div><div><b id="cm">0</b><span>minutes</span></div><div><b id="cs">0</b><span>seconds</span></div>
+      </div>
+      <a href="#rsvp" class="btn btn--gold">RSVP by 1 November</a>
+    </div>
+  </header>
+
+  <div class="kente" aria-hidden="true"></div>
+
+  <section class="story" id="story">
+    <p class="kicker">Our story</p>
+    <h2 class="h2">It started with a <i>lost umbrella</i> at Chale Wote.</h2>
+    <ol class="timeline">
+      <li><span>Aug 2019</span><div><h3>The umbrella</h3><p>Kojo picked up Ama’s umbrella at the street art festival in Jamestown and spent an hour trying to find its owner. She’d already bought another one.</p></div><img src="img/street.webp" alt="Couple walking hand in hand on a cobblestone street" loading="lazy"></li>
+      <li><span>Mar 2021</span><div><h3>First trip</h3><p>A long weekend in Ada Foah turned into “we should do this forever”. Kojo got sunburned. Ama has photos.</p></div><img src="img/beach.webp" alt="Kojo lifting Ama on the beach" loading="lazy"></li>
+      <li><span>Jun 2026</span><div><h3>The question</h3><p>Kojo proposed at the same spot in Jamestown, this time holding two umbrellas. She said yes before he finished the speech.</p></div><img src="img/touch.webp" alt="Ama touching Kojo's face lovingly" loading="lazy"></li>
+    </ol>
+  </section>
+
+  <section class="events" id="events">
+    <p class="kicker">The weekend</p>
+    <h2 class="h2">Three moments, <i>one family</i></h2>
+    <div class="ev-grid" id="evGrid"></div>
+    <div class="dress">
+      <p class="kicker">Colours of the day</p>
+      <p>We’d love to see you in our colours, and kente or your best print is always welcome.</p>
+      <ul class="swatches"><li style="--c:#5a1f2b">Wine</li><li style="--c:#c39a52">Gold</li><li style="--c:#f3eadb">Ivory</li><li style="--c:#2f4a3a">Forest</li></ul>
+    </div>
+  </section>
+
+  <section class="gallery" aria-label="Photos">
+    <img src="img/walk.webp" alt="Ama and Kojo walking together through tall grass" loading="lazy">
+    <img src="img/smile.webp" alt="Ama smiling in a dark headscarf and orange beads" loading="lazy">
+    <img src="img/groom.webp" alt="Kojo in a black tuxedo and sunglasses" loading="lazy">
+    <img src="img/gele.webp" alt="Bridesmaid in a green gele and white lace" loading="lazy">
+  </section>
+
+  <section class="rsvp" id="rsvp">
+    <div class="rsvp__card">
+      <p class="kicker">Kindly reply by 1 November</p>
+      <h2 class="h2">Will you <i>celebrate</i> with us?</h2>
+      <form id="rsvpForm" novalidate>
+        <label>Full name<input name="name" autocomplete="name" placeholder="As it appears on your invitation"></label>
+        <fieldset class="yn"><legend>Attending?</legend>
+          <label><input type="radio" name="att" value="yes"><span>Joyfully accept</span></label>
+          <label><input type="radio" name="att" value="no"><span>Regretfully decline</span></label>
+        </fieldset>
+        <div class="if-yes" id="ifYes" hidden>
+          <fieldset class="evs"><legend>Which events?</legend>
+            <label><input type="checkbox" name="ev" value="Engagement" checked><span>Engagement · Fri</span></label>
+            <label><input type="checkbox" name="ev" value="Wedding" checked><span>Wedding · Sat</span></label>
+            <label><input type="checkbox" name="ev" value="Reception" checked><span>Reception · Sat</span></label>
+          </fieldset>
+          <div class="row">
+            <label>Guests (incl. you)<select name="guests"><option>1</option><option>2</option></select></label>
+            <label>Meal<select name="meal"><option>Jollof &amp; grilled chicken</option><option>Banku &amp; tilapia</option><option>Vegetarian red-red</option></select></label>
+          </div>
+          <label>A song that will get you dancing<input name="song" placeholder="e.g. Sarkodie, Black Sherif, Daddy Lumba…"></label>
+        </div>
+        <label>A note for the couple <small>(optional)</small><textarea name="note" rows="2"></textarea></label>
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn btn--wine btn--block" type="submit">Send RSVP</button>
+      </form>
+      <div class="thanks" id="thanks" hidden>
+        <p class="thanks__icon" aria-hidden="true">♡</p>
+        <h3 id="thanksTitle"></h3>
+        <p id="thanksTxt"></p>
+        <a class="btn btn--gold" id="cal" download="ama-and-kojo.ics" hidden>Add the wedding to your calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="gifts" id="gifts">
+    <p class="kicker">Gifts</p>
+    <h2 class="h2">Your presence is <i>the gift</i></h2>
+    <p class="gifts__lead">If you’d like to bless us, we’re saving for our first home. You can send MoMo, or bring an envelope on the day.</p>
+    <div class="gift-cards">
+      <div class="gift"><span>MTN MoMo</span><b>024 000 0000</b><small>Name: Ama Mensah</small><button class="copy" data-copy="0240000000">Copy number</button></div>
+      <div class="gift"><span>Bank transfer</span><b>1234 5678 9012</b><small>Sample Bank · Ama &amp; Kojo Ofori</small><button class="copy" data-copy="123456789012">Copy account</button></div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <p class="kicker">Good to know</p>
+    <h2 class="h2">Questions</h2>
+    <div class="faq__list" id="faqList"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="foot__tag">#AmaKojo26</p>
+  <p>Made with love in Accra. A wedding website template by <a href="https://github.com/Creation20">William Bentil</a>. The couple is fictional. Photos from Unsplash.</p>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="main.js"></script>
+</body>
+</html>

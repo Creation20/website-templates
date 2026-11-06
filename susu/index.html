@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Susu — Save together, grow faster</title>
+<meta name="description" content="Susu: a group savings app for Ghana. Save with MoMo, run susu circles with friends and earn interest. Fintech landing page template by William Bentil.">
+<meta name="theme-color" content="#f2f6ef">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230c3b2e'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%23d7f36a' stroke-width='6'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23d7f36a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="#" class="logo" aria-label="Susu home"><i aria-hidden="true"></i>susu</a>
+  <nav class="nav__links" aria-label="Primary"><a href="#how">How it works</a><a href="#calc">Calculator</a><a href="#faq">FAQ</a></nav>
+  <a href="#get" class="btn btn--dark btn--sm">Get the app</a>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero__copy">
+      <p class="pill">✦ New: save in US$ with Susu Dollar</p>
+      <h1>Save together.<br><span>Grow faster.</span></h1>
+      <p class="lead">Susu is the savings app built for how Ghana saves. Run a digital susu circle with friends, auto-save from MoMo every payday, and earn up to <b>14% a year</b>.</p>
+      <div class="hero__ctas"><a href="#get" class="btn btn--lime">Start saving, it’s free</a><a href="#calc" class="btn btn--line">See what you’d earn</a></div>
+      <ul class="hero__proof"><li><b>180k+</b>savers</li><li><b>GH₵ 96M</b>saved</li><li><b>4.8★</b>Play Store</li></ul>
+    </div>
+    <div class="hero__phone">
+      <div class="phone" aria-label="Susu app preview">
+        <div class="phone__screen">
+          <div class="app__top"><span>Hi, Akosua 👋🏾</span><i>A</i></div>
+          <div class="app__bal">
+            <small>Total savings</small>
+            <b>GH₵ <span id="bal">0.00</span></b>
+            <em>+ GH₵ 412.80 interest this year</em>
+          </div>
+          <div class="app__goal">
+            <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="18" stroke="#e1eadb" stroke-width="6" fill="none"/><circle id="ring" cx="22" cy="22" r="18" stroke="#0c3b2e" stroke-width="6" fill="none" stroke-dasharray="113.1" stroke-dashoffset="113.1" stroke-linecap="round" transform="rotate(-90 22 22)"/></svg>
+            <div><b>New laptop</b><small>GH₵ 7,250 of 10,000</small></div>
+          </div>
+          <p class="app__h">Circle · Office Susu</p>
+          <div class="app__circle"><i style="--h:20">AO</i><i style="--h:150">KB</i><i style="--h:260">EA</i><i style="--h:40">YM</i><i class="you">You</i><span>Your payout: <b>Dec 1</b></span></div>
+          <p class="app__h">Recent</p>
+          <ul class="app__tx" id="tx"></ul>
+        </div>
+      </div>
+      <div class="float float--a"><b>✓</b><span>Auto-save<br><small>GH₵ 200 every payday</small></span></div>
+      <div class="float float--b"><b>14%</b><span>p.a. on<br><small>Fixed Goals</small></span></div>
+    </div>
+  </section>
+
+  <section class="rails" aria-label="Payment methods">
+    <span>Top up &amp; withdraw with</span>
+    <ul><li>MTN MoMo</li><li>Telecel Cash</li><li>AT Money</li><li>Visa</li><li>Mastercard</li><li>Bank transfer</li></ul>
+  </section>
+
+  <section class="features">
+    <h2 class="h2">Everything your money<br>needs to <span>grow</span></h2>
+    <div class="bento">
+      <article class="b b--wide b--dark"><div><h3>Digital susu circles</h3><p>Invite friends, set a contribution and payout order, and Susu collects from everyone’s MoMo automatically. No chasing anyone.</p></div><div class="b__circle" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><span>GH₵<br>6,000</span></div></article>
+      <article class="b b--lime"><h3>Auto-save</h3><p>Round up purchases or save a fixed amount every payday.</p><b class="b__big">GH₵ 200</b><small>every 25th</small></article>
+      <article class="b"><h3>Goals with interest</h3><p>Lock savings for 3–12 months and earn up to 14% p.a.</p><div class="b__bars" aria-hidden="true"><i style="--h:30%"></i><i style="--h:45%"></i><i style="--h:58%"></i><i style="--h:74%"></i><i style="--h:100%"></i></div></article>
+      <article class="b b--img"><img src="img/biz.webp" alt="Smiling businessman looking at his phone" loading="lazy"><div><h3>Susu for Business</h3><p>Staff welfare and savings schemes on autopilot.</p></div></article>
+      <article class="b"><h3>Bank-grade security</h3><p>Biometric login, encrypted data and funds held with licensed partner banks.</p><div class="b__lock" aria-hidden="true">🔒</div></article>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <h2 class="h2">Start in <span>3 minutes</span></h2>
+    <ol class="steps">
+      <li><b>01</b><h3>Sign up with your number</h3><p>All you need is your phone number and Ghana Card.</p></li>
+      <li><b>02</b><h3>Link your MoMo</h3><p>Connect MTN, Telecel or AT. Top up anytime with no fees.</p></li>
+      <li><b>03</b><h3>Pick a way to save</h3><p>Start a goal, join a circle, or switch on auto-save.</p></li>
+    </ol>
+  </section>
+
+  <section class="calc" id="calc">
+    <div class="calc__ctl">
+      <h2 class="h2">What would you <span>earn?</span></h2>
+      <label>I can save every month <output id="oAmt"></output><input type="range" id="amt" min="50" max="5000" step="50" value="500"></label>
+      <label>For <output id="oMon"></output><input type="range" id="mon" min="3" max="36" step="1" value="12"></label>
+      <div class="rate" role="radiogroup" aria-label="Savings type">
+        <button role="radio" aria-checked="false" data-rate="8">Flexi · 8%</button>
+        <button role="radio" aria-checked="true" data-rate="14">Fixed Goal · 14%</button>
+      </div>
+    </div>
+    <div class="calc__out">
+      <p>You’d have</p>
+      <b id="total">GH₵ 0</b>
+      <p class="calc__split"><span>You saved <b id="saved"></b></span><span class="lime">Interest earned <b id="earned"></b></span></p>
+      <div class="chart" id="chart" aria-hidden="true"></div>
+      <small>Illustrative only. Rates are examples for this template; returns are not guaranteed.</small>
+    </div>
+  </section>
+
+  <section class="voices">
+    <figure><img src="img/hero.webp" alt="Young man excited while looking at his phone" loading="lazy"><blockquote>“Our office susu used to live in a notebook. Now it runs itself, and I got my payout on time for the first time ever.”<figcaption>Kwabena · Teacher, Tema</figcaption></blockquote></figure>
+    <figure><img src="img/her.webp" alt="Smiling woman sitting on a chair" loading="lazy"><blockquote>“Auto-save takes GH₵ 300 every payday before I can spend it. I’ve saved my rent advance in 8 months.”<figcaption>Akosua · Nurse, Accra</figcaption></blockquote></figure>
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 class="h2">Questions</h2>
+    <div class="faq__list" id="faqList"></div>
+  </section>
+
+  <section class="get" id="get">
+    <div>
+      <h2>Your money, <span>growing.</span></h2>
+      <p>Download Susu free on Android and iPhone, or dial <b>*000*00#</b> on any phone.</p>
+      <div class="stores"><a href="#" class="store"><small>Get it on</small>Google Play</a><a href="#" class="store"><small>Download on the</small>App Store</a></div>
+    </div>
+    <div class="qr" aria-label="QR code to download the app" id="qr"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>© 2026 Susu Technologies (fictional). A fintech landing page template by <a href="https://github.com/Creation20">William Bentil</a>. Photos from Unsplash.</p>
+  <p class="foot__legal">Susu is not a real product. Interest rates and statistics shown are illustrative placeholders.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

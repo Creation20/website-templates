@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FORGE — Strength &amp; Conditioning Gym, Airport City</title>
+<meta name="description" content="FORGE: strength training, HIIT, boxing and spin in Airport City, Accra. Book classes online. Gym website template by William Bentil.">
+<meta name="theme-color" content="#f4f4f2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%232f5bff'/%3E%3Cpath d='M18 46V18h28v8H28v5h14v8H28v7z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a href="#" class="brand" aria-label="Forge home">FORGE<sup>®</sup></a>
+  <nav class="top__nav" aria-label="Primary"><a href="#classes">Classes</a><a href="#programs">Programs</a><a href="#plans">Membership</a><a href="#bmi">Tools</a></nav>
+  <a href="#plans" class="btn btn--blue btn--sm">Free day pass</a>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero__copy">
+      <div class="capacity" id="capacity" aria-live="polite">
+        <span class="capacity__dot"></span>
+        <span><b id="capNum">–</b> people training now</span>
+        <span class="capacity__bar"><i id="capBar"></i></span>
+        <span class="capacity__lbl" id="capLbl"></span>
+      </div>
+      <h1>Train like<br>it <span class="blue">matters.</span></h1>
+      <p>Coached strength, conditioning and boxing in Airport City. We have no mirrors-and-selfie culture, just good programming and people who show up.</p>
+      <div class="hero__ctas"><a href="#classes" class="btn btn--blue">Book a class</a><a href="#plans" class="btn btn--line">See membership</a></div>
+    </div>
+    <div class="hero__img">
+      <img src="img/hero.webp" alt="Coach in a black T-shirt standing with arms crossed" width="2000" height="1333" fetchpriority="high">
+      <div class="stat stat--a"><b>06:00</b><span>Doors open daily</span></div>
+      <div class="stat stat--b"><b>42</b><span>classes every week</span></div>
+    </div>
+  </section>
+
+  <div class="band" aria-hidden="true"><div class="band__track"><span>Strength</span><span>Conditioning</span><span>Boxing</span><span>Spin</span><span>Mobility</span><span>Strength</span><span>Conditioning</span><span>Boxing</span><span>Spin</span><span>Mobility</span></div></div>
+
+  <section class="programs" id="programs">
+    <h2 class="h2">Programs</h2>
+    <div class="prog-grid">
+      <article class="prog prog--big"><img src="img/lift.webp" alt="Athlete lifting a heavy barbell" loading="lazy"><div><span>01</span><h3>Strength</h3><p>Squat, bench and deadlift with periodised programming and a coach on every platform.</p></div></article>
+      <article class="prog"><img src="img/neon.webp" alt="Athlete in a dimly lit gym" loading="lazy"><div><span>02</span><h3>HIIT</h3><p>45 minutes of intervals that leave nothing in the tank.</p></div></article>
+      <article class="prog"><img src="img/purple.webp" alt="Woman doing core work under purple light" loading="lazy"><div><span>03</span><h3>Core &amp; Mobility</h3><p>Move better and recover faster.</p></div></article>
+      <article class="prog"><img src="img/bench.webp" alt="Athlete bench pressing with a spotter" loading="lazy"><div><span>04</span><h3>Powerlifting Club</h3><p>Meet prep and technique, three nights a week.</p></div></article>
+      <article class="prog"><img src="img/tread.webp" alt="Treadmills in a dim gym" loading="lazy"><div><span>05</span><h3>Open Gym</h3><p>Train your way, 06:00 to 22:00.</p></div></article>
+    </div>
+  </section>
+
+  <section class="classes" id="classes">
+    <div class="classes__head">
+      <h2 class="h2">This week</h2>
+      <div class="types" id="types"></div>
+    </div>
+    <div class="days" id="days" role="tablist" aria-label="Day of week"></div>
+    <ul class="sched" id="sched" aria-live="polite"></ul>
+    <p class="note">Booking is free for members. Cancel up to 2 hours before to keep your streak.</p>
+  </section>
+
+  <section class="plans" id="plans">
+    <div class="plans__head">
+      <h2 class="h2">Membership</h2>
+      <div class="bill" role="radiogroup" aria-label="Billing period">
+        <button role="radio" aria-checked="true" data-bill="m">Monthly</button>
+        <button role="radio" aria-checked="false" data-bill="y">Yearly <em>2 months free</em></button>
+      </div>
+    </div>
+    <div class="plan-grid" id="planGrid"></div>
+  </section>
+
+  <section class="bmi" id="bmi">
+    <div>
+      <h2 class="h2">Know your <span class="blue">numbers</span></h2>
+      <p>A quick BMI check. It’s only a starting point, and our coaches look at much more during your free assessment.</p>
+      <div class="units" role="radiogroup" aria-label="Units"><button role="radio" aria-checked="true" data-u="metric">cm / kg</button><button role="radio" aria-checked="false" data-u="imperial">ft / lb</button></div>
+      <label>Height <output id="hOut"></output><input type="range" id="h" min="140" max="210" value="175"></label>
+      <label>Weight <output id="wOut"></output><input type="range" id="w" min="40" max="160" value="78"></label>
+    </div>
+    <div class="gauge">
+      <svg viewBox="0 0 200 120" aria-hidden="true">
+        <path d="M20 110 A80 80 0 0 1 180 110" fill="none" stroke="#e3e3df" stroke-width="18" stroke-linecap="round"/>
+        <path id="arc" d="M20 110 A80 80 0 0 1 180 110" fill="none" stroke="#2f5bff" stroke-width="18" stroke-linecap="round" stroke-dasharray="251.3" stroke-dashoffset="251.3"/>
+      </svg>
+      <b id="bmiVal">0</b>
+      <span id="bmiCat"></span>
+      <p id="bmiTip"></p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <img src="img/bells.webp" alt="Rows of dumbbells on a rack" loading="lazy">
+    <div><h2>Your first day is <span class="blue">on us.</span></h2><p>Bring a friend, a towel and a water bottle. 18 Liberation Road, Airport City · Open 06:00–22:00.</p><a href="#plans" class="btn btn--blue">Claim free pass</a></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="foot__big">FORGE</p>
+  <p class="foot__note">A gym website template by <a href="https://github.com/Creation20">William Bentil</a>. Forge is fictional. Photos from Unsplash.</p>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="main.js"></script>
+</body>
+</html>

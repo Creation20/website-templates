@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haven — Homes for sale &amp; rent in Accra</title>
+<meta name="description" content="Haven: verified houses and apartments for sale and rent in East Legon, Cantonments, Airport Residential and more. Real-estate website template by William Bentil.">
+<meta name="theme-color" content="#f3f2ee">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2323412f'/%3E%3Cpath d='M16 46V28l16-12 16 12v18H38V34H26v12z' fill='%23f3f2ee'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="head">
+  <a href="#" class="logo" aria-label="Haven home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27V14l11-8 11 8v13h-7v-8h-8v8z" fill="currentColor"/></svg>Haven</a>
+  <nav class="head__nav" aria-label="Primary"><a href="#listings">Buy</a><a href="#listings" data-mode-link="rent">Rent</a><a href="#areas">Neighbourhoods</a><a href="#mortgage">Mortgage</a></nav>
+  <div class="head__right"><button class="saved" id="savedBtn">♡ Saved <b id="savedCount">0</b></button><a href="#agent" class="btn btn--dark btn--sm">List a property</a></div>
+</header>
+
+<main>
+  <section class="hero">
+    <img class="hero__img" src="img/hero.webp" alt="Modern white house with a red accent wall and a swimming pool" width="2000" height="1333" fetchpriority="high">
+    <div class="hero__veil"></div>
+    <div class="hero__content">
+      <p class="eyebrow">2,400+ verified homes · Greater Accra</p>
+      <h1>Find your place<br>in <em>Accra</em>.</h1>
+    </div>
+    <form class="finder" id="finder">
+      <div class="finder__tabs" role="tablist">
+        <button type="button" role="tab" class="is-on" data-mode="buy" aria-selected="true">Buy</button>
+        <button type="button" role="tab" data-mode="rent" aria-selected="false">Rent</button>
+      </div>
+      <div class="finder__fields">
+        <label><span>Location</span><select id="fArea"><option value="">All of Accra</option></select></label>
+        <label><span>Type</span><select id="fType"><option value="">Any type</option><option>House</option><option>Apartment</option><option>Townhouse</option></select></label>
+        <label><span>Bedrooms</span><select id="fBeds"><option value="0">Any</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option></select></label>
+        <label><span>Max price</span><select id="fMax"></select></label>
+        <button class="btn btn--brass" type="submit">Search homes</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="trust">
+    <div><b>100%</b><span>listings visited &amp; verified by our team</span></div>
+    <div><b>Title</b><span>Lands Commission search on every sale</span></div>
+    <div><b>48 hrs</b><span>average time to book a viewing</span></div>
+    <div><b>US$ / GH₵</b><span>prices shown in both currencies</span></div>
+  </section>
+
+  <section class="listings" id="listings">
+    <div class="listings__head">
+      <div><p class="eyebrow" id="modeLabel">For sale</p><h2 class="h2">Homes worth <em>visiting</em></h2></div>
+      <div class="listings__tools">
+        <div class="chips" id="chips">
+          <button class="chip" data-f="pool">Pool</button><button class="chip" data-f="gated">Gated</button><button class="chip" data-f="furnished">Furnished</button><button class="chip" data-f="new">New build</button>
+        </div>
+        <select id="sort" aria-label="Sort listings"><option value="new">Newest</option><option value="low">Price ↑</option><option value="high">Price ↓</option><option value="size">Largest</option></select>
+      </div>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="areas" id="areas">
+    <div class="areas__intro">
+      <p class="eyebrow">Neighbourhood guides</p>
+      <h2 class="h2">Know the area <em>before</em> you move</h2>
+      <p>Commute times, schools, water supply and the best places to eat, written by people who live there.</p>
+    </div>
+    <div class="areas__list" id="areaList"></div>
+  </section>
+
+  <section class="mortgage" id="mortgage">
+    <div class="mortgage__copy">
+      <p class="eyebrow">Mortgage calculator</p>
+      <h2 class="h2">What will it <em>cost</em> each month?</h2>
+      <p>Estimates are based on typical US$ mortgage terms offered by Ghanaian banks. Your lender’s rate may differ.</p>
+    </div>
+    <div class="calc">
+      <label>Home price <output id="oPrice"></output><input type="range" id="mPrice" min="80000" max="1500000" step="5000" value="450000"></label>
+      <label>Deposit <output id="oDep"></output><input type="range" id="mDep" min="10" max="60" step="5" value="30"></label>
+      <label>Interest rate <output id="oRate"></output><input type="range" id="mRate" min="6" max="20" step="0.5" value="11"></label>
+      <label>Term <output id="oYears"></output><input type="range" id="mYears" min="5" max="25" step="1" value="15"></label>
+      <div class="calc__out">
+        <p>Estimated monthly payment</p>
+        <b id="monthly">$0</b>
+        <div class="calc__bar"><i id="barP"></i><i id="barI"></i></div>
+        <div class="calc__legend"><span><i class="p"></i>Principal <b id="lp"></b></span><span><i class="i"></i>Interest <b id="li"></b></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="agent" id="agent">
+    <img src="img/i5.webp" alt="Bright living room with a floating staircase" loading="lazy" width="1100" height="733">
+    <div>
+      <h2 class="h2">Selling or letting? <em>We’ll handle it.</em></h2>
+      <p>Professional photos, a verified listing and pre-screened buyers. We only take a fee when it’s done.</p>
+      <a class="btn btn--brass" href="#">Get a free valuation</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__cols">
+    <div><a class="logo" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27V14l11-8 11 8v13h-7v-8h-8v8z" fill="currentColor"/></svg>Haven</a><p>Verified homes across Greater Accra.</p></div>
+    <div><h3>Popular</h3><a href="#">East Legon</a><a href="#">Cantonments</a><a href="#">Airport Residential</a></div>
+    <div><h3>Company</h3><a href="#">About</a><a href="#">Agents</a><a href="#">Careers</a></div>
+    <div><h3>Visit</h3><p>4 Liberation Road, Airport City, Accra</p></div>
+  </div>
+  <p class="foot__note">A real-estate website template by <a href="https://github.com/Creation20">William Bentil</a>. Haven and its listings are fictional. Photos from Unsplash.</p>
+</footer>
+
+<dialog class="home" id="home" aria-labelledby="hTitle">
+  <button class="home__close" data-close aria-label="Close">✕</button>
+  <div class="home__gallery"><img id="hMain" alt=""><div class="home__thumbs" id="hThumbs"></div></div>
+  <div class="home__body">
+    <div>
+      <p class="eyebrow" id="hArea"></p>
+      <h2 id="hTitle"></h2>
+      <p class="home__price" id="hPrice"></p>
+      <ul class="specs" id="hSpecs"></ul>
+      <p id="hDesc"></p>
+      <ul class="feat" id="hFeat"></ul>
+    </div>
+    <aside class="viewing">
+      <div class="agent-card"><i id="hAgentI"></i><div><b id="hAgent"></b><small>Haven agent · replies in 1 hr</small></div></div>
+      <div id="viewForm">
+        <p class="viewing__t">Schedule a viewing</p>
+        <div class="vdays" id="vDays"></div>
+        <div class="vtimes" id="vTimes"></div>
+        <input id="vName" placeholder="Your name" autocomplete="name">
+        <input id="vPhone" placeholder="Phone number" type="tel" autocomplete="tel">
+        <p class="err" id="vErr" role="alert"></p>
+        <button class="btn btn--dark btn--block" id="vBook">Request viewing</button>
+      </div>
+      <div class="vdone" id="vDone" hidden><b>✓ Viewing requested</b><p id="vDoneTxt"></p></div>
+    </aside>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="main.js"></script>
+</body>
+</html>
